@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080d18">
+  <title>AEGIS-X | Space Combustion Intelligence</title>
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div class="brand"><span>◆</span> AEGIS-X</div>
+      <div class="top-tag">SPACE COMBUSTION INTELLIGENCE</div>
+    </header>
+
+    <section class="hero">
+      <div class="eyebrow">RESEARCH PLATFORM / VERSION 2.0</div>
+      <h1>Understanding fire<br><span>before it becomes a threat.</span></h1>
+      <p>Evidence-driven analysis of combustion experiments for future space habitats.</p>
+      <div class="research-status"><i></i> SCIENTIFIC RESEARCH MODE · NOT A CERTIFIED SAFETY SYSTEM</div>
+    </section>
+
+    <main>
+      <section class="section-heading">
+        <div><span class="section-index">01</span><h2>Experimental Data Vault</h2></div>
+        <p>Import original measurements and curated research records separately.</p>
+      </section>
+
+      <section class="upload-grid">
+        <article class="panel upload-card">
+          <div class="source-label">SOURCE A / ORIGINAL</div>
+          <h3>NASA Experimental Table</h3>
+          <p>Raw measurements. Original cell values will be preserved.</p>
+          <label class="upload-button" for="rawFile">Choose raw CSV</label>
+          <input id="rawFile" type="file" accept=".csv,text/csv">
+          <div id="rawFileName" class="file-name">No file selected</div>
+        </article>
+
+        <article class="panel upload-card">
+          <div class="source-label">SOURCE B / ENRICHED</div>
+          <h3>Curated Evidence Table</h3>
+          <p>Experiment metadata, outcomes, notes and report references.</p>
+          <label class="upload-button" for="curatedFile">Choose curated CSV</label>
+          <input id="curatedFile" type="file" accept=".csv,text/csv">
+          <div id="curatedFileName" class="file-name">No file selected</div>
+        </article>
+      </section>
+
+      <div class="toolbar">
+        <button id="auditButton" disabled>ANALYZE DATASETS <span>→</span></button>
+        <div id="auditStatus" role="status">Waiting for both datasets</div>
+      </div>
+
+      <section class="metrics">
+        <article class="panel metric"><span>RAW ROWS</span><strong id="rawCount">—</strong><small>Imported records</small></article>
+        <article class="panel metric"><span>CURATED ROWS</span><strong id="curatedCount">—</strong><small>Imported records</small></article>
+        <article class="panel metric"><span>QUALITY FLAGS</span><strong id="flagCount">—</strong><small>Records requiring review</small></article>
+        <article class="panel metric"><span>VALUE CONFLICTS</span><strong id="conflictCount">—</strong><small>Matched IDs with differences</small></article>
+      </section>
+
+      <section class="panel">
+        <div class="section-heading inner-heading">
+          <div><span class="section-index">02</span><h2>Source Reconciliation</h2></div>
+        </div>
+        <p class="muted">Comparison uses identifiable test IDs. Uncertain matches are not treated as confirmed.</p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>TEST ID</th><th>RAW O₂</th><th>CURATED O₂</th><th>INVESTIGATION</th><th>RESULT</th></tr></thead>
+            <tbody id="comparisonBody"><tr><td colspan="5">Import both datasets to begin.</td></tr></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="section-heading inner-heading">
+          <div><span class="section-index">03</span><h2>Data Quality Observatory</h2></div>
+        </div>
+        <p class="muted">Missing, ambiguous, duplicated and unusual values are listed for human verification.</p>
+        <div id="issueList" class="issue-list">No analysis has been run.</div>
+      </section>
+
+      <section class="panel">
+        <div class="section-heading inner-heading">
+          <div><span class="section-index">04</span><h2>Evidence Coverage</h2></div>
+        </div>
+        <div id="coverage" class="coverage">
+          <p class="muted">Coverage information will appear after analysis.</p>
+        </div>
+      </section>
+
+      <section class="disclaimer">
+        <strong>Scientific integrity protocol</strong>
+        <p>This prototype performs data-quality checks and source comparisons. It does not establish ignition probability, certify material safety, or prescribe fire-suppression actions. Differences must be checked against the original NASA records.</p>
+      </section>
+    </main>
+
+    <footer>AEGIS-X · RESEARCH PROTOTYPE · EVIDENCE BEFORE INFERENCE</footer>
+  </div>
+</body>
+</html>
